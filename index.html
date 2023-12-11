@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <title>Gerador de senha</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="img-folders-password">
+            <a id="buttonOpenModal">
+                <img src="img/exit.svg" width="42">
+            </a>
+        </div>
+        <section class="hero">
+            <h1 class="title">Gerador de senha</h1>
+            <p class="subtitle">Utilize o nosso gerador online para criar uma senha forte e segura</p>
+        </section>
+        <section class="box">
+            <div class="password">
+                <div class="text">
+                    <input type="text" name="password" id="password" readonly>
+                </div>
+                <div class="actions">
+                    <button id="download">
+                        <img src="img/download-solid.svg" width="42">
+                    </button>
+                    <button id="copy-1">
+                        <img src="img/copy-solid.svg" width="42">
+                    </button>
+                    <button id="renew">
+                        <img src="img/rotate.svg" width="42">
+                    </button>
+                </div>
+            </div>
+            <div class="security-indicator">
+                <div id="security-indicator-bar" class="bar">
+                </div>
+            </div>
+        </section>
+        <section class="box customize">
+            <h3 class="title">Personalizar</h3>
+            <div class="actions">
+                <div class="password-length">
+                    <p>Tamanho: <span id="password-length-text">16</span></p>
+                    <input type="range" class="slider" name="password-length" id="password-length" value="16" min="4"
+                        max="64" />
+                </div>
+                <div class="config">
+                    <label class="checkbox-container">
+                        <span class="text">Maiúsculas</span>
+                        <input type="checkbox" id="uppercase-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">
+                        <span class="text">Números</span>
+                        <input type="checkbox" id="numbers-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">
+                        <span class="text">Símbolos</span>
+                        <input type="checkbox" id="symbol-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <div class="submit">
+            <button id="copy-2">Copiar senha</button>
+        </div>
+        <section  class="page2">
+            <div class="link">
+                <a id="buttonReturn2"><img src="img/exit.svg" width="42"></a>
+            </div>
+        </section>
+    </main>
+    <div class="modal-full hidden" id="modalFull">
+        <div class="m-body">
+            <section class="box" id="box-container">
+
+            </section>
+            <section class="box-return">
+                <div class="return-button">
+                    <a id="return-generetor">
+                        Retornar para o gerador 
+                        <span class="img-return">
+                            <img src="img/exit.svg" width="42">
+                        </span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/script.js" ></script>
+</body>
+
+</html>

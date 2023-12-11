@@ -1,0 +1,428 @@
+body{
+    background-color: #f8fafd;
+    font-family: 'Inter', sans-serif;
+    color: #252525;
+    padding: 2rem;
+}
+.hidden{
+    display: none!important;
+}
+main{
+    max-width: 780px;
+    margin: 0 auto;
+}
+.img-folders-password{
+    position: absolute;
+    right: 50px;
+    background-color: #eaeaea9a;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 1rem;
+}
+.hero{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.hero .title{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+.hero .subtitle{
+    font-size: 1.25rem;
+    color: #828282; 
+}
+
+.box{
+    background-color: #fff;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+.password{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.password .text{
+    flex: 1;
+}
+.password .text input{
+    font-family: "Inconsolata", serif;
+    font-size: 3rem;
+    border: none;
+    outline: none;
+    cursor: default;
+    height: 52px;
+    width: 100%;
+    transition: all 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.password .text input.font-sm{
+    font-size: 2rem;
+}
+.password .text input.font-xs{
+    font-size: 1.5rem;    
+}
+.password .text input.font-xxs{
+    font-size: 1rem;
+}
+.password .actions button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.3;
+    transform: opacity 0.2s;
+}
+.password .actions button:hover{
+    opacity: 0.6;
+}
+
+.security-indicator{
+    height: 10px;
+    background-color: #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.security-indicator .bar{
+    height: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    transition: all 0.2s;
+}
+
+.security-indicator .bar.completed{
+    border-top-right-radius: 0;
+}
+
+.security-indicator .bar.critical{
+    background-color: #eb5757;
+}
+
+.security-indicator .bar.warning {
+    background-color: #f2c94c;
+}
+
+.security-indicator .bar.safe{
+    background-color: #27ae60;
+}
+
+.customize{
+    padding: 1rem 1.5rem;
+}
+.customize .title{
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+}
+.customize .actions{
+    display: flex;
+    gap: 3rem;
+    color: #828282;
+}
+.customize .password-length{
+    flex: 1;
+}
+.customize .password-length .slider{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    background: #ddd;
+    outline: none;
+    border-radius: 8px;
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-top: 1rem;
+}
+.customize .password-length .slider:hover{
+    opacity: 1;
+}
+.customize .password-length .slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #9b51e0;
+    cursor: pointer;
+}
+.customize .password-length .slider::-moz-range-thumb{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #9b51e0;
+    cursor: pointer;
+}
+.checkbox-container{
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox-container input{
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox-container .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ddd;
+    transition: all 0.2s;
+}
+
+.checkbox-container:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.checkbox-container input:checked ~ .checkmark{
+    background-color: #9b51e0;
+}
+
+.checkbox-container .checkmark:after{
+    content: "";
+    display: none;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 13px;
+    border: solid white;
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark::after{
+    display: block;
+}
+
+.submit{
+    text-align: center;
+}
+.submit button{
+    background-color: #bb6db9;
+    font-size: 1.375rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    transition: all 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.submit button:hover{
+    background-color: #9b51e0;
+}
+.link{
+    text-align: center;
+    background-color: #eaeaea9a;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+}
+.page2{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media only screen and (max-width: 480px){
+    .password{
+        padding: 1rem;
+    }
+    .password .text input{
+        font-size: 1.5rem;
+    }
+    .password .text input.font-sm{
+        font-size: 1.2rem;
+    }
+    .password .text input.font-xs{
+        font-size: 1rem;
+    }
+    .password .text input.font-xxs{
+        font-size: 1rem;
+    }
+    .password .actions img{
+        width: 24px;
+    }
+}
+@media (max-width: 920px){
+    .img-folders-password{
+        display: none;
+    }
+    .page2{
+        display: flex;
+    }
+}
+
+.modal-full{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #f8fafd;
+    padding: 2rem; 
+    z-index: 9990;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    background-color: #fff;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 3rem;
+}
+.box-password{
+    background-color: #eaeaea9a;
+    border-radius: 8px;
+}
+
+.m-password{
+    display: flex;
+    align-items: center;
+}
+.m-password .text{
+    display: flex;
+    flex: auto;
+    padding: 1rem 0.5rem 1rem 1.5rem;
+}
+.m-password .text .name-password{
+    margin-right: 0.5rem;
+}
+.m-password .text input{
+    font-family: "Inconsolata", serif;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: default;
+    height: 52px;
+    width: 100%;
+    transition: all 0.2s;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+.m-password .actions{
+    margin: 0;
+    padding: 0 1.5rem 0 0.5rem;
+}
+.m-password .actions button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.3;
+    transform: opacity 0.2s;
+}
+.m-password .actions button:hover{
+    opacity: 0.6;
+}
+
+.box-return{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.return-button{
+    background-color: #fff;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+.return-button a{
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.return-button a:visited{
+    color: #252525;
+}
+.return-button #return-generetor .img-return{
+    opacity: 0.4;
+    padding-left: 1rem;
+}
+.return-button #return-generetor:hover .img-return{
+    opacity: 0.6;
+}
+@media (max-width: 920px){
+    .m-password .actions{
+        display: flex;
+    }
+    .m-password .actions button.copy{
+        width: 40px;
+    }
+    .m-password .actions button.delet{
+        width: 33px;
+    }
+}
+@media (max-width: 770px){
+    .m-password .text input{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 640px){
+    .m-password .text{
+        display: block;
+    }
+    .m-password .text input.name-password{
+        margin-bottom: 0.3rem;
+        text-align: center;
+    }
+}
+@media (max-width: 435px){
+    body{
+        padding: 1rem;  
+    }
+    .box{
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+    }
+    .m-password .text input{
+        font-size: 0.9rem;
+    }
+    .m-password .actions{
+        display: block;
+    }
+    .m-password .actions a.copy{
+        width: 40px;
+        margin-bottom: 1.5rem;
+    }
+    .m-password .actions a.delet{
+        width: 33px;
+    }
+}
+
+#return-generetor, #buttonOpenModal{
+    cursor: pointer;
+}
